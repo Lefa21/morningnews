@@ -12,7 +12,7 @@ require('./models/connection')
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'reactapp/build')));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
